@@ -1,4 +1,12 @@
 ## The Golden Rule: 
+1) Add html elements, inputs for ingredients and quantity also name. 
+2) Add selector for cups/teaspoons etc, and add buttons with meal output.
+3) Add Id's names and classes.
+4) Create const and lets for all elements in app.js.
+5) Create functions.
+6) Add remove and save functions. Pray it works. 
+7) Do .css to organize site and make it all pretty
+
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
 
