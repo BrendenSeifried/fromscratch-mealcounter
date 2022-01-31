@@ -5,7 +5,12 @@ const listMeal = document.getElementById('list-meal');
 
 
 // let state
+let counters = [];
+let meals = [];
 
+function statsFood() {
+    listFood.textContent;
+}
 // set event listeners 
   // get user input
   // use user input to update state 
