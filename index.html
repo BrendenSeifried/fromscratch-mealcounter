@@ -31,18 +31,39 @@
                         Type ingredients:
                         <input type="text" name="ingredient" id="ingredient"/>
                         Amount:
-                        <input type="text" name="ingredient" id="ingredient"/>
+                        <input type="number" name="amount" id="amount"/>
                     </label>
+                    Measurement: 
+                    <select>
+                        <option value="cups">Cups</option>
+                        <option value="teaspoons">Teaspoons</option>
+                        <option value="tablespoons">Tablespoons</option>
+                    </select>
+                    <button id="confirm">Add Together</button>
                 </form>
+
+                <div >
+                    <ul id="list-food"></ul>
+                     <button id="undo">Undo Last Concoction</button>
+                </div>
             </div>
 
-            <p>
-                Lorem ipsum 
-            </p>
+            <h2>Save It!</h2>
+
+            <div class="list-meal" >
+                <label>
+                    Meal Name:
+                    <input type="text" name="name" id="name">
+                </label>
+            </div>
+            <section>
+                <h2>Meals</h2>
+                <ul id="totals"></ul>
+            </section>
+            
+            
             <hr />
-            <p>
-                Lorem ipsum 
-            </p>
+           
 
         </section>
     </main>

@@ -1,4 +1,8 @@
 // import functions and grab DOM elements
+const supply = document.getElementById('supplies');
+const listFood = document.getElementById('list-food');
+const listMeal = document.getElementById('list-meal');
+
 
 // let state
 
