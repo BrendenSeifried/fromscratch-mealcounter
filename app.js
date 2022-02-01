@@ -23,11 +23,12 @@ let meals = [];
 //     console.log(statsfood);
 // }
 
-function remFood() {
+function rendFood() {
     listFood.textContent = '';
-    for (let count of counters) {
-        const li = remFood(count);
-        listFood.appendChild(li);
+    for (let meal of meals) {
+        const li = rendFood(meal);
+        //listFood.appendChild(li);
+        listFood.append(li);
     }
 }
 
@@ -35,32 +36,30 @@ supply.addEventListener('submit', (e) => {
     e.preventDefault();
     const addSup = new FormData(supply);
     const userData = {
-      
-
         ingredient: addSup.get('ingredient'),
         amount: Number(addSup.get('amount')),
-     
     };
-    //console.log(userData);
+    console.log(userData);
+    meals.push(userData);
+    rendFood();
 });
+
 //counters.push(userData);
 //console.log();
 
-
-nameIt.addEventListener('click', (e) => {
-    e.preventDefault();
-    const addName = new FormData(nameIt);
-    const userData = {
-        name: addName.get('name'),
-    };
-    //console.log(userData);
-});
+// function enterName() {
+//     nameIt.textContent = '';
+//     for (let meal of meals) {
+//         const li = enterName(meal);
+//         nameIt.append(li);
+//     }
+// }
 
 
 clear.addEventListener('click', () => {
   // Step 2 -- add code to allow users to remove the most recent stat
     counters.pop();
-    remFood();
+    rendFood();
     
   // Hint -- how do you remove an element from an array?
   // Hint -- how can we rerender the stats using a function above?
