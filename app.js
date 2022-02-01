@@ -1,4 +1,4 @@
-// import functions and grab DOM elements
+// import functions and grab DOM elements REORGINIZE 
 const supply = document.getElementById('supplies');
 const listFood = document.getElementById('list-food');
 const listMeal = document.getElementById('list-meal');
@@ -9,8 +9,15 @@ let counters = [];
 let meals = [];
 
 function statsFood() {
-    listFood.textContent;
+    supply.textContent = '';
+    for (let meal of meals) {
+        const li = statsFood(meal);
+        supply.append(li);
+        console.log(statsfood);
+    }
+    console.log(statsfood);
 }
+
 // set event listeners 
   // get user input
   // use user input to update state 
