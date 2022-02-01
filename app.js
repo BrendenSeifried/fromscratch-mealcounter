@@ -3,6 +3,7 @@
 const supply = document.getElementById('supplies');
 const listFood = document.getElementById('list-food');
 const listMeal = document.getElementById('list-meal');
+const nameIt = document.getElementById('name-it');
 
 const save = document.getElementById('confirm');
 
@@ -36,6 +37,15 @@ supply.addEventListener('submit', (e) => {
 //counters.push(userData);
 //console.log();
 
+
+nameIt.addEventListener('click', (e) => {
+    e.preventDefault();
+    const addName = new FormData(nameIt);
+    const userData = {
+        name: addName.get('name'),
+    };
+    console.log(userData);
+});
 
 // set event listeners 
   // get user input
