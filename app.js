@@ -29,11 +29,12 @@ supply.addEventListener('submit', (e) => {
 
         ingredient: addSup.get('ingredient'),
         amount: Number(addSup.get('amount')),
-        //console.log(supply);
+     
     };
+    console.log(userData);
 });
 //counters.push(userData);
-console.log(supply);
+//console.log();
 
 
 // set event listeners 
