@@ -42,6 +42,7 @@ supply.addEventListener('submit', (e) => {
     console.log(userData);
     meals.push(userData);
     rendFood();
+    
 });
 
 //counters.push(userData);
