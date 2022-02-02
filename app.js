@@ -45,6 +45,7 @@ supply.addEventListener('submit', (e) => {
     const userData = {
         ingredient: addSup.get('ingredient'),
         amount: Number(addSup.get('amount')),
+        type: addSup.get('type'),
     };
    // console.log(userData);
     meals.push(userData);
