@@ -1,5 +1,7 @@
 //import { statsFood, amountFood } from './utils.js';
 // import functions and grab DOM elements REORGINIZE 
+import { rendFood } from './utils.js';
+
 const supply = document.getElementById('supplies');
 const listFood = document.getElementById('list-food');
 //const listMeal = document.getElementById('list-meal');
@@ -23,7 +25,10 @@ let meals = [];
 //     console.log(statsfood);
 // }
 
-function rendFood() {
+
+
+
+function rendFoods() {
     listFood.textContent = '';
     for (let meal of meals) {
         const li = rendFood(meal);
@@ -33,6 +38,7 @@ function rendFood() {
     //console.log(meal);
 }
 
+
 supply.addEventListener('submit', (e) => {
     e.preventDefault();
     const addSup = new FormData(supply);
@@ -40,9 +46,11 @@ supply.addEventListener('submit', (e) => {
         ingredient: addSup.get('ingredient'),
         amount: Number(addSup.get('amount')),
     };
+
+    
     console.log(userData);
     meals.push(userData);
-    rendFood();
+    rendFoods();
     
 });
 
