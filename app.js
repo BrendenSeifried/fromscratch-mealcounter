@@ -30,6 +30,7 @@ function rendFood() {
         //listFood.appendChild(li);
         listFood.append(li);
     }
+    //console.log(meal);
 }
 
 supply.addEventListener('submit', (e) => {

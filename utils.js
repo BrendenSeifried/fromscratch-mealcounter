@@ -1,6 +1,7 @@
-export function statsFood(item) {
+
+export function rendFood(meal) {
     const li = document.createElement('li');
-    li.textContent = `${item.ingredient} (${item.amount} Amount)`;
+    li.textContent = `${meal.ingredient} ${meal.amount}`;
     return li;
 }
 

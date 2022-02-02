@@ -1,6 +1,6 @@
 
 
-import { ingredient, amount } from './utils.js';
+import { ingredient, amount } from '../utils.js';
 const test = QUnit.test;
 
 test('return stuff', (expect) => {
