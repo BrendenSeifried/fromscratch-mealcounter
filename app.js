@@ -52,6 +52,19 @@ supply.addEventListener('submit', (e) => {
     
 });
 
+nameIt.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const addName = new FormData(supply);
+    const userData = {
+        ingredient: addName.get('ingredient'),
+        amount: Number(addName.get('amount')),
+    };
+ // console.log(userData);
+    meals.push(userData);
+    rendFoods();
+  
+});
+
 //counters.push(userData);
 //console.log();
 
@@ -63,10 +76,10 @@ supply.addEventListener('submit', (e) => {
 //     }
 // }
 
-function clearMeals() {
-    meals = [];
-    listFood.textContent = '';
-}
+// function clearMeals() {
+//     meals = [];
+//     listFood.textContent = '';
+// }
 
 
 clear.addEventListener('click', () => {
