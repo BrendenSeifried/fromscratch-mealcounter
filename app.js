@@ -2,8 +2,8 @@
 // import functions and grab DOM elements REORGINIZE 
 import { rendFood } from './utils.js';
 
-const supply = document.getElementById('supplies');
-const listFood = document.getElementById('list-food');
+const supply = document.getElementById('supplies'); //used
+const listFood = document.getElementById('list-food'); //used
 //const listMeal = document.getElementById('list-meal');
 const nameIt = document.getElementById('name-it');
 
@@ -46,9 +46,7 @@ supply.addEventListener('submit', (e) => {
         ingredient: addSup.get('ingredient'),
         amount: Number(addSup.get('amount')),
     };
-
-    
-    console.log(userData);
+   // console.log(userData);
     meals.push(userData);
     rendFoods();
     
@@ -65,15 +63,25 @@ supply.addEventListener('submit', (e) => {
 //     }
 // }
 
+function clearMeals() {
+    meals = [];
+    listFood.textContent = '';
+}
+
 
 clear.addEventListener('click', () => {
   // Step 2 -- add code to allow users to remove the most recent stat
-    counters.pop();
-    rendFood();
+    listFood.textContent = '';
+    meals.pop();
+    rendFoods();
     
+    //rendFood();
+    //clearMeals();
+    //console.log(meals);
   // Hint -- how do you remove an element from an array?
   // Hint -- how can we rerender the stats using a function above?
 });
+
 // set event listeners 
   // get user input
   // use user input to update state 

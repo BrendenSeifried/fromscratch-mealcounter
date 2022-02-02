@@ -6,3 +6,6 @@ export function rendFood(meal) {
 }
 
 
+// export function rendName(name) {
+//     const div = document.createElement('div');
+// }
