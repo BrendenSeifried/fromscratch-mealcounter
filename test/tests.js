@@ -1,16 +1,16 @@
 
 
-import { meal.ingredient, meal.amount } from '../utils.js';
+import { rendFood } from '../utils.js';
 const test = QUnit.test;
 
 test('return stuff', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'bren, 12';
+    const expected = '<li>rice, 12 cups</li>';
 
     //Act
     // Call the function you're testing and set the result to a const
-    const actual = remFood({ ingredient: 'bren', amount: 12 });
+    const actual = rendFood({ ingredient: 'rice,', amount: 12, type: 'cups' });
 
     //Expect
     // Make assertions about what is expected versus the actual result

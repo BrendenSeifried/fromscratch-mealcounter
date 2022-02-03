@@ -7,8 +7,10 @@
     color: #fff;
     padding: 10px;
     border: solid 3px black;
-   
-    float:right;
+    position:relative;
+     right:100px; 
+     
+    
 }
 
 .list-food{
@@ -17,6 +19,8 @@
     color: #fff;
     padding: 10px;
     border: solid 3px black;
+    position:relative;
+     right:100px; 
 }
 
 .name-it {
@@ -27,6 +31,8 @@
     padding: 10px;
     border: solid 3px black;
     display: grid;
-    float:right;
+    position:relative;
+     left:100px; 
+     bottom: 250px;
 }
 
