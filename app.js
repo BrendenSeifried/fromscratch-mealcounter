@@ -2,18 +2,24 @@
 // import functions and grab DOM elements REORGINIZE 
 import { rendFood } from './utils.js';
 import { rendName } from './utils.js';
+//import { rendEverything } from './utils.js';
 
-const supply = document.getElementById('supplies'); //used
-const listFood = document.getElementById('list-food'); //used
-const listNames = document.getElementById('list-names');
+const supply = document.getElementById('supplies'); 
+const listFood = document.getElementById('list-food'); 
+
 const nameIt = document.getElementById('name-it');
+const listNames = document.getElementById('list-names');
+
+// const allTogether = document.getElementById('totals');
+// const listAll = document.getElementById('main-section');
+
 
 const clear = document.getElementById('undo');
 const saveMeal = document.getElementById('save');
 
 
 // let state
-//let counters = [];
+let counters = [];
 let meals = [];
 let names = [];
 
@@ -51,6 +57,17 @@ function rendNames() {
    
 }
 
+// function rendEverythings() {
+//     listAll.textContent = '';
+//     for (let count of counters) {
+//         const li = rendFood(count);
+        
+//         listAll.append(li);
+//         //console.log(count);
+//     }
+//    //console.log(count);
+// }
+
 supply.addEventListener('submit', (e) => {
     e.preventDefault();
     const addSup = new FormData(supply);
@@ -65,18 +82,54 @@ supply.addEventListener('submit', (e) => {
     
 });
 
-saveMeal.addEventListener('click', (e) => {
+// saveMeal.addEventListener('click', (e) => {    //NEW CODE
+//     e.preventDefault();
+//     const addName = new FormData(nameIt);
+//     const addSup = new FormData(supply);
+//     const userName = {
+//         name: addName.get('name'),
+        
+//     };
+//     const userData = {
+//         ingredient: addSup.get('ingredient'),
+//         amount: Number(addSup.get('amount')),
+//         type: addSup.get('type'),
+//     };
+    
+//     //console.log(userName);
+//     names.push(userName, userData);
+//     //names.push(userData);
+//     rendNames();
+  
+// });
+
+saveMeal.addEventListener('click', (e) => {        //WORKING CODE
     e.preventDefault();
     const addName = new FormData(nameIt);
     const userName = {
         name: addName.get('name'),
-        
+        ingredients: meals,
     };
     //console.log(userName);
     names.push(userName);
     rendNames();
   
 });
+
+// allTogether.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     const addAll = new FormData(allTogether);
+//     const userAll = {
+//         ingredient: addAll.get('ingredient'),
+//         amount: Number(addAll.get('amount')),
+//         type: addAll.get('type'),
+//         name: addAll.get('name'),
+//     };
+//     console.log(userAll);
+//     counters.push(userAll);
+//     rendEverythings();
+    
+// });
 
 //counters.push(userData);
 //console.log();
