@@ -6,19 +6,6 @@ export function rendFood(meal) {
 }
 
 
-// export function rendName(name) {
-//     const li = document.createElement('li');
-//     li.textContent = `${name.name}`;
-//     return li;
-// }
-
-// export function rendEverything(every) {
-//     const li = document.createElement('li');
-//     li.textContent = ` ${every.name} : ${every.ingredient} ${every.amount} ${every.type} `;
-//     return li;
-// }
-
-
 export function rendName(name) {
     const li = document.createElement('li');
     const ul = document.createElement('ul');
