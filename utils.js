@@ -7,7 +7,7 @@ export function rendFood(meal) {
 
 
 export function rendName(name) {
-    const div = document.createElement('div');
-    div.textcontent = `${name}`;
-    return div;
+    const li = document.createElement('li');
+    li.textContent = `${name.name}`;
+    return li;
 }

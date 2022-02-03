@@ -1,19 +1,21 @@
 //import { statsFood, amountFood } from './utils.js';
 // import functions and grab DOM elements REORGINIZE 
 import { rendFood } from './utils.js';
+import { rendName } from './utils.js';
 
 const supply = document.getElementById('supplies'); //used
 const listFood = document.getElementById('list-food'); //used
-//const listMeal = document.getElementById('list-meal');
+const listNames = document.getElementById('list-names');
 const nameIt = document.getElementById('name-it');
 
 const clear = document.getElementById('undo');
-const save = document.getElementById('confirm');
+const saveMeal = document.getElementById('save');
 
 
 // let state
-let counters = [];
+//let counters = [];
 let meals = [];
+let names = [];
 
 // function statsFood() {
 //     supply.textContent = '';
@@ -39,6 +41,16 @@ function rendFoods() {
 }
 
 
+function rendNames() {
+    listNames.textContent = '';
+    for (let name of names) {
+        const li = rendName(name);
+        listNames.append(li);
+        //console.log(name);
+    }
+   
+}
+
 supply.addEventListener('submit', (e) => {
     e.preventDefault();
     const addSup = new FormData(supply);
@@ -53,16 +65,16 @@ supply.addEventListener('submit', (e) => {
     
 });
 
-nameIt.addEventListener('submit', (e) => {
+saveMeal.addEventListener('click', (e) => {
     e.preventDefault();
-    const addName = new FormData(supply);
-    const userData = {
-        ingredient: addName.get('ingredient'),
-        amount: Number(addName.get('amount')),
+    const addName = new FormData(nameIt);
+    const userName = {
+        name: addName.get('name'),
+        
     };
- // console.log(userData);
-    meals.push(userData);
-    rendFoods();
+    //console.log(userName);
+    names.push(userName);
+    rendNames();
   
 });
 
@@ -96,6 +108,9 @@ clear.addEventListener('click', () => {
   // Hint -- how can we rerender the stats using a function above?
 });
 
+
+
+  
 // set event listeners 
   // get user input
   // use user input to update state 
