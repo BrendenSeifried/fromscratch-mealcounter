@@ -1,4 +1,49 @@
 ## The Golden Rule: 
+1) Add html elements, inputs for ingredients and quantity also name. 
+2) Add selector for cups/teaspoons etc, and add buttons with meal output.
+3) Add Id's names and classes.
+4) Create const and lets for all elements in app.js.
+5) Create functions.
+6) Add remove and save functions. Pray it works. 
+7) Do .css to organize site and make it all pretty
+
+
+
+
+    Add Ingredients Feature
+        Make the form
+        Add the form event listener (VALIDATE using console.log)
+        ACP
+        TDD <li> render function
+        ACP
+        create ingredients array variable
+        push form data to the ingredients array
+        add your <ul> to the HTML
+        add renderIngredients function (loop through all the ingredients, create an LI, render to page)
+        ACP
+
+    Remove Last Item
+        Add the button
+        Add the event listener
+        Pop off the last element
+        render the ingredients
+        ACP
+
+    Save Meal Function
+        Add the input and button to HTML
+        Add the event listener, and validate it works
+        ACP
+        TDD <li> render function
+        ACP
+        create meals array variable
+        push the meal info on the array
+        add <ul> to the HTML
+        add renderMeals function (loop through all the meals, create an LI and render to the page)
+        ACP
+        reset the ingredients
+        render the ingredients
+
+
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
 
